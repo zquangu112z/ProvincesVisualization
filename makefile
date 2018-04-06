@@ -1,0 +1,2 @@
+run:
+	Rscript main.R

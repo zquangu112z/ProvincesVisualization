@@ -1,9 +1,9 @@
 library("tmap")
 library("tmaptools")
 library("openxlsx")
-data <- read.xlsx("abxmem.xlsx")
+data <- read.xlsx("resources/abxmem.xlsx")
 head(data)
-vnshapefile <- "Provinces.shp"
+vnshapefile <- "resources/Provinces.shp"
 if (file.exists(vnshapefile) == TRUE){
   vngeo <- read_shape(file = vnshapefile, as.sf = TRUE)
   vnmap <- append_data(vngeo, data, key.shp = "VARNAME_2", key.data ="province")
